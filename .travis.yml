@@ -22,7 +22,7 @@ deploy:
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SCRET_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
 
 after_success:
   - echo "Test Success"

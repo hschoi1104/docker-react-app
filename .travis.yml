@@ -1,0 +1,16 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+defore_install:
+  - echo "start Creating an image with dockerfile"
+  - docker build -t hschoi1104/docker-react-app -f Dockerfile.dev
+
+script:
+  - docker run -e CI=true hschoi1104/docker-react-app npm run test -- --coverage
+
+after_success:
+  - echo "Test Success"

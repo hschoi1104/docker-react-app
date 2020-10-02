@@ -12,5 +12,17 @@ defore_install:
 script:
   - docker run -e CI=true hschoi1104/docker-react-app npm run test -- --coverage
 
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "docker-react-app"
+  env: "DockerReactApp-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-2-593117559098"
+  bucket_path: "docker-react-app"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SCRET_ACCESS_KEY
+
 after_success:
   - echo "Test Success"

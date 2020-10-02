@@ -1,3 +1,7 @@
+# Docker-React-App ![](https://travis-ci.com/hschoi1104/docker-react-app.svg?branch=master)
+
+- docker와 Travis.ci를 활용하여 CI 연습하기
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
